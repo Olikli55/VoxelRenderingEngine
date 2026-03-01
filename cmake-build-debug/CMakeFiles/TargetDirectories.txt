@@ -1,0 +1,3 @@
+/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug/CMakeFiles/VoxelRenderingEngine.dir
+/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug/CMakeFiles/rebuild_cache.dir

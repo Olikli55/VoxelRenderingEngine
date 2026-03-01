@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

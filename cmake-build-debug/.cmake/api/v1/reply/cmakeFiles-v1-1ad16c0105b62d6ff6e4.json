@@ -1,0 +1,329 @@
+{
+	"globsDependent" : 
+	[
+		{
+			"expression" : "/home/plutonium/CLionProjects/VoxelRenderingEngine/src/*.c",
+			"paths" : 
+			[
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/glad.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "/home/plutonium/CLionProjects/VoxelRenderingEngine/src/*.cpp",
+			"paths" : 
+			[
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/Main.cpp",
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/Window.cpp",
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/Camera.cpp",
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/gl/EBO.cpp",
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/gl/VAO.cpp",
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/gl/VBO.cpp",
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/renderer/RendererClass.cpp",
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/renderer/Texture.cpp",
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/renderer/shaderClass.cpp",
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/stb.cpp",
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/core/ChunkClass.cpp",
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/core/worldClass.cpp",
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/spatial/OctTreeClass.cpp"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "/home/plutonium/CLionProjects/VoxelRenderingEngine/src/*.h",
+			"paths" : 
+			[
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/Camera.h",
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/gl/EBO.h",
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/gl/VAO.h",
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/gl/VBO.h",
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/renderer/RendererClass.h",
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/renderer/Texture.h",
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/renderer/shaderClass.h",
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/window.h",
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/core/CellClass.h",
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/core/ChunkClass.h",
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/core/Direction.h",
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/core/PackedVector.h",
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/core/WorldClass.h",
+				"/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/spatial/OctTreeClass.h"
+			],
+			"recurse" : true
+		}
+	],
+	"inputs" : 
+	[
+		{
+			"path" : "CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/4.1.2/CMakeSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/CMakeSystemSpecificInitialize.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/Platform/Linux-Initialize.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/4.1.2/CMakeCCompiler.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/CMakeSystemSpecificInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/CMakeGenericSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/CMakeInitializeConfigs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/Platform/Linux.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/Platform/UnixPaths.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/CMakeCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/Compiler/GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/Platform/Linux-GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/Platform/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/Internal/CMakeCLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/Internal/CMakeCommonLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/Linker/GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/Linker/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/Platform/Linker/Linux-GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/Platform/Linker/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/Platform/Linker/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/CMakeCXXInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/Compiler/GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/Platform/Linux-GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/Platform/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/Internal/CMakeCXXLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/Internal/CMakeCommonLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/Linker/GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/Linker/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/Platform/Linker/Linux-GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/Platform/Linker/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/FindOpenGL.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/glfw3/glfw3ConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/glfw3/glfw3Config.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/FindThreads.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/CheckLibraryExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/CheckIncludeFile.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/CheckCSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/Internal/CheckSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/var/lib/snapd/snap/clion/425/bin/cmake/linux/x64/share/cmake-4.1/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/glfw3/glfw3Targets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/glfw3/glfw3Targets-noconfig.cmake"
+		}
+	],
+	"kind" : "cmakeFiles",
+	"paths" : 
+	{
+		"build" : "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug",
+		"source" : "/home/plutonium/CLionProjects/VoxelRenderingEngine"
+	},
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 1
+	}
+}

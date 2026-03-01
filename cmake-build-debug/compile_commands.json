@@ -1,0 +1,86 @@
+[
+{
+  "directory": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug",
+  "command": "/bin/g++ -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/gl -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/renderer -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/core -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/spatial -I/home/plutonium/CLionProjects/VoxelRenderingEngine/Libraries/include -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/VoxelRenderingEngine.dir/src/Main.cpp.o -c /home/plutonium/CLionProjects/VoxelRenderingEngine/src/Main.cpp",
+  "file": "/home/plutonium/CLionProjects/VoxelRenderingEngine/src/Main.cpp",
+  "output": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug/CMakeFiles/VoxelRenderingEngine.dir/src/Main.cpp.o"
+},
+{
+  "directory": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug",
+  "command": "/bin/g++ -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/gl -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/renderer -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/core -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/spatial -I/home/plutonium/CLionProjects/VoxelRenderingEngine/Libraries/include -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/VoxelRenderingEngine.dir/src/Window.cpp.o -c /home/plutonium/CLionProjects/VoxelRenderingEngine/src/Window.cpp",
+  "file": "/home/plutonium/CLionProjects/VoxelRenderingEngine/src/Window.cpp",
+  "output": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug/CMakeFiles/VoxelRenderingEngine.dir/src/Window.cpp.o"
+},
+{
+  "directory": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug",
+  "command": "/bin/g++ -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/gl -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/renderer -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/core -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/spatial -I/home/plutonium/CLionProjects/VoxelRenderingEngine/Libraries/include -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/VoxelRenderingEngine.dir/src/render/Camera.cpp.o -c /home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/Camera.cpp",
+  "file": "/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/Camera.cpp",
+  "output": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug/CMakeFiles/VoxelRenderingEngine.dir/src/render/Camera.cpp.o"
+},
+{
+  "directory": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug",
+  "command": "/bin/g++ -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/gl -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/renderer -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/core -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/spatial -I/home/plutonium/CLionProjects/VoxelRenderingEngine/Libraries/include -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/VoxelRenderingEngine.dir/src/render/gl/EBO.cpp.o -c /home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/gl/EBO.cpp",
+  "file": "/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/gl/EBO.cpp",
+  "output": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug/CMakeFiles/VoxelRenderingEngine.dir/src/render/gl/EBO.cpp.o"
+},
+{
+  "directory": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug",
+  "command": "/bin/g++ -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/gl -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/renderer -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/core -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/spatial -I/home/plutonium/CLionProjects/VoxelRenderingEngine/Libraries/include -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/VoxelRenderingEngine.dir/src/render/gl/VAO.cpp.o -c /home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/gl/VAO.cpp",
+  "file": "/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/gl/VAO.cpp",
+  "output": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug/CMakeFiles/VoxelRenderingEngine.dir/src/render/gl/VAO.cpp.o"
+},
+{
+  "directory": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug",
+  "command": "/bin/g++ -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/gl -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/renderer -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/core -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/spatial -I/home/plutonium/CLionProjects/VoxelRenderingEngine/Libraries/include -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/VoxelRenderingEngine.dir/src/render/gl/VBO.cpp.o -c /home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/gl/VBO.cpp",
+  "file": "/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/gl/VBO.cpp",
+  "output": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug/CMakeFiles/VoxelRenderingEngine.dir/src/render/gl/VBO.cpp.o"
+},
+{
+  "directory": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug",
+  "command": "/bin/gcc -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/gl -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/renderer -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/core -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/spatial -I/home/plutonium/CLionProjects/VoxelRenderingEngine/Libraries/include -g -fdiagnostics-color=always -o CMakeFiles/VoxelRenderingEngine.dir/src/render/glad.c.o -c /home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/glad.c",
+  "file": "/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/glad.c",
+  "output": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug/CMakeFiles/VoxelRenderingEngine.dir/src/render/glad.c.o"
+},
+{
+  "directory": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug",
+  "command": "/bin/g++ -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/gl -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/renderer -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/core -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/spatial -I/home/plutonium/CLionProjects/VoxelRenderingEngine/Libraries/include -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/VoxelRenderingEngine.dir/src/render/renderer/RendererClass.cpp.o -c /home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/renderer/RendererClass.cpp",
+  "file": "/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/renderer/RendererClass.cpp",
+  "output": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug/CMakeFiles/VoxelRenderingEngine.dir/src/render/renderer/RendererClass.cpp.o"
+},
+{
+  "directory": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug",
+  "command": "/bin/g++ -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/gl -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/renderer -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/core -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/spatial -I/home/plutonium/CLionProjects/VoxelRenderingEngine/Libraries/include -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/VoxelRenderingEngine.dir/src/render/renderer/Texture.cpp.o -c /home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/renderer/Texture.cpp",
+  "file": "/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/renderer/Texture.cpp",
+  "output": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug/CMakeFiles/VoxelRenderingEngine.dir/src/render/renderer/Texture.cpp.o"
+},
+{
+  "directory": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug",
+  "command": "/bin/g++ -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/gl -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/renderer -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/core -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/spatial -I/home/plutonium/CLionProjects/VoxelRenderingEngine/Libraries/include -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/VoxelRenderingEngine.dir/src/render/renderer/shaderClass.cpp.o -c /home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/renderer/shaderClass.cpp",
+  "file": "/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/renderer/shaderClass.cpp",
+  "output": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug/CMakeFiles/VoxelRenderingEngine.dir/src/render/renderer/shaderClass.cpp.o"
+},
+{
+  "directory": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug",
+  "command": "/bin/g++ -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/gl -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/renderer -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/core -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/spatial -I/home/plutonium/CLionProjects/VoxelRenderingEngine/Libraries/include -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/VoxelRenderingEngine.dir/src/stb.cpp.o -c /home/plutonium/CLionProjects/VoxelRenderingEngine/src/stb.cpp",
+  "file": "/home/plutonium/CLionProjects/VoxelRenderingEngine/src/stb.cpp",
+  "output": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug/CMakeFiles/VoxelRenderingEngine.dir/src/stb.cpp.o"
+},
+{
+  "directory": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug",
+  "command": "/bin/g++ -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/gl -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/renderer -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/core -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/spatial -I/home/plutonium/CLionProjects/VoxelRenderingEngine/Libraries/include -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/VoxelRenderingEngine.dir/src/world/core/ChunkClass.cpp.o -c /home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/core/ChunkClass.cpp",
+  "file": "/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/core/ChunkClass.cpp",
+  "output": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug/CMakeFiles/VoxelRenderingEngine.dir/src/world/core/ChunkClass.cpp.o"
+},
+{
+  "directory": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug",
+  "command": "/bin/g++ -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/gl -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/renderer -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/core -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/spatial -I/home/plutonium/CLionProjects/VoxelRenderingEngine/Libraries/include -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/VoxelRenderingEngine.dir/src/world/core/worldClass.cpp.o -c /home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/core/worldClass.cpp",
+  "file": "/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/core/worldClass.cpp",
+  "output": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug/CMakeFiles/VoxelRenderingEngine.dir/src/world/core/worldClass.cpp.o"
+},
+{
+  "directory": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug",
+  "command": "/bin/g++ -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/gl -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/render/renderer -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/core -I/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/spatial -I/home/plutonium/CLionProjects/VoxelRenderingEngine/Libraries/include -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/VoxelRenderingEngine.dir/src/world/spatial/OctTreeClass.cpp.o -c /home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/spatial/OctTreeClass.cpp",
+  "file": "/home/plutonium/CLionProjects/VoxelRenderingEngine/src/world/spatial/OctTreeClass.cpp",
+  "output": "/home/plutonium/CLionProjects/VoxelRenderingEngine/cmake-build-debug/CMakeFiles/VoxelRenderingEngine.dir/src/world/spatial/OctTreeClass.cpp.o"
+}
+]
