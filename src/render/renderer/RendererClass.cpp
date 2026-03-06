@@ -5,28 +5,27 @@
 #include <chrono>
 #include <iostream>
     Renderer::Renderer()
-	    :
-	    VAO1(),
-	    VBO1(vertices.data(), vertices.size() * sizeof(GLfloat)), 	// Generates Vertex Buffer Object and links it to vertices
-	    EBO1(indices.data(), indices.size() * sizeof(GLuint))      // Generates Element Buffer Object and links it to indices
+	: VAO_()
+	, VBO_(vertices.data(), vertices.size() * sizeof(GLfloat))
+	, EBO_(indices.data(), indices.size() * sizeof(GLuint))
 
 
     {
         glfwSwapInterval(0);// disables the v-Sync
 	    // Generates Vertex Array Object and binds it
-	    VAO1.Bind(); // dont i need to bind other too? strange
+	    VAO_.Bind();
 
 
 	    // Links VBO attributes such as coordinates and colors to VAO with information on how much everything
-	    VAO1.LinkAttrib(VBO1, 0, 3, GL_FLOAT, 5 * sizeof(GLfloat), (void*)0);
-	    VAO1.LinkAttrib(VBO1, 1, 2, GL_FLOAT, 5 * sizeof(GLfloat), (void*)(3 * sizeof(GLfloat))); // chek this!!!!
+	    VAO_.LinkAttrib(VBO_, 0, 3, GL_FLOAT, 5 * sizeof(GLfloat), (void*)0);
+	    VAO_.LinkAttrib(VBO_, 1, 2, GL_FLOAT, 5 * sizeof(GLfloat), (void*)(3 * sizeof(GLfloat))); // chek this!!!!
 
 
 
-        EBO1.Bind(); // This links EBO to the currently bound VAO
-	    VAO1.Unbind();
-	    VBO1.Unbind();
-	    EBO1.Unbind();// Unbind all to prevent accidentally modifying them bc "i am stupid" (f1 refrence)
+        EBO_.Bind(); // This links EBO to the currently bound VAO
+	    VAO_.Unbind();
+	    VBO_.Unbind();
+	    EBO_.Unbind();
 
 	    glEnable(GL_DEPTH_TEST);
 
@@ -48,10 +47,9 @@ void Renderer::clrVertices() {
 }
 
 Renderer::~Renderer() {
-	VAO1.Delete();
-	VBO1.Delete();
-	EBO1.Delete();
-	// deletes vereything so there are no dangling pointers
+	VAO_.Delete();
+	VBO_.Delete();
+	EBO_.Delete();
 }
 
 void Renderer::render() {
@@ -62,9 +60,9 @@ void Renderer::render() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     // Bind buffers, upload current vertex/index data, then draw
-    VBO1.Bind();
-    VAO1.Bind();
-    EBO1.Bind();
+    VBO_.Bind();
+    VAO_.Bind();
+    EBO_.Bind();
 
     glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(indices.size()), GL_UNSIGNED_INT, 0);
     //10-50ms
@@ -84,7 +82,7 @@ void Renderer::handlePrespective(Window* myWindow, Shader& shaderProgram) {
 
 	model = glm::rotate(model, glm::radians(angle), glm::vec3(1.0f, 1.0f, 1.0f));
 	view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
-	projection = glm::perspective(glm::radians(45.0f), (float)(myWindow->h / myWindow->w), 0.1f, 100.0f);
+	projection = glm::perspective(glm::radians(45.0f), static_cast<float>(myWindow->h / myWindow->w), 0.1f, 100.0f);
 
 	int modelLoc = glGetUniformLocation(shaderProgram.ID, "model");
 	glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
@@ -214,14 +212,14 @@ void Renderer::renderMesh(std::vector<PackedVector> data, glm::i32vec3 chunkPos)
 }
 
 void Renderer::uploadMesh() {
-    VBO1.Bind();
+    VBO_.Bind();
     glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(GLfloat), vertices.data(), GL_DYNAMIC_DRAW);
-    EBO1.Bind();
+    EBO_.Bind();
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(GLuint), indices.data(), GL_DYNAMIC_DRAW);
 }
 
 
-void Renderer::allocateMem(size_t sizeV, size_t sizeI) {
+void Renderer::allocateMem(const size_t sizeV, const size_t sizeI) {
 
     //   only reserve if it needs more capacity than it has
     if (indices.capacity() < sizeI) {

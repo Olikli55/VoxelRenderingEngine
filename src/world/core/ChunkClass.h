@@ -13,7 +13,7 @@ class World; // Forward declaration
 
 class Chunk {
 public:
-	GLuint VAO, VBO, EBO;
+
 	glm::i32vec3 position;
 	std::vector<PackedVector> mesh;
 	static constexpr int CHUNK_SIZE = 32; // static?????????? why????
@@ -21,11 +21,14 @@ public:
 	World* worldPtr;
 	
 	Chunk(glm::i32vec3 BasePos, const siv::PerlinNoise& Noise, World* myWorld);
-	
+	void render();
+	void setupBuffers();
 	void generateMesh();
-
-	bool isDirty = false; // true = needs re-upload to GPU
+	void uploadMesh();
 private:
+	VAO vao;
+	VBO vbo;
+	EBO ebo;
 	bool isSolid(int x, int y, int z) const;
 	std::vector<GLfloat> vertices;
 	std::vector<GLuint> indices;

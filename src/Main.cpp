@@ -50,7 +50,8 @@ int main() {
 
 		cubeTexture.Bind();
 
-		myRenderer.render();
+		myWorld.renderAllChunks();
+
 		glfwSwapBuffers(myWindow.window);      // Swap the back buffer with the front buffer
 		glfwPollEvents();
 
@@ -58,10 +59,8 @@ int main() {
 		if (currentChunk != previusChunk) {
 
 			myWorld.generateChunkAround(currentChunk);
-
-
-			myWorld.AppendUploadMesh(myRenderer);
-
+			myWorld.uploadChunksBuffers();
+			//myWorld.AppendUploadMesh(myRenderer);
 		}
 
  

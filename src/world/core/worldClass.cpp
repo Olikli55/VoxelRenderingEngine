@@ -19,8 +19,8 @@
 
 void World::loadChunks(Renderer& myRenderer) {
 
-	for (auto& [_, chunk] : chunks) {
-		myRenderer.renderMesh(chunk.mesh, chunk.position);
+	for (auto& chunk : chunks) {
+		myRenderer.renderMesh(chunk.second.mesh, chunk.second.position);
 
 	}
 }
@@ -30,15 +30,15 @@ void World::buildAndUploadMesh(Renderer& myRenderer) {
     myRenderer.clrVertices();
 	size_t sizeV = 0;
 	size_t sizeI = 0;
-	for (auto& [_, chunk] : chunks) {
+	for (auto& chunk  : chunks) {
 		//							 pos    texture pos     4 cords
-		sizeV += chunk.mesh.size() * (3      + 2             + 4);
-		sizeI += chunk.mesh.size() * 6; // 6 indicies
+		sizeV += chunk.second.mesh.size() * (3      + 2             + 4);
+		sizeI += chunk.second.mesh.size() * 6; // 6 indices
 	}
 	myRenderer.allocateMem(sizeV, sizeI);
 
-    for (auto& [_, chunk] : chunks) {
-        myRenderer.renderMesh(chunk.mesh, chunk.position);
+    for (auto& chunk : chunks) {
+        myRenderer.renderMesh(chunk.second.mesh, chunk.second.position);
     }
 
     myRenderer.uploadMesh();
@@ -47,14 +47,12 @@ void World::buildAndUploadMesh(Renderer& myRenderer) {
 
 void World::AppendUploadMesh(Renderer& myRenderer) {
     if (newChunksPos.empty()) {
-        return;
-    }
-
+        return;}
 
     size_t sizeV = 0;
     size_t sizeI = 0;
 
-    for (const glm::i32vec3& pos : newChunksPos) { //0.01ms
+    for (const auto pos : newChunksPos) {
         const auto& chunk = chunks.at(pos);
         const size_t meshSize = chunk.mesh.size();
         sizeV += meshSize * (3 + 2 + 4);
@@ -62,7 +60,7 @@ void World::AppendUploadMesh(Renderer& myRenderer) {
     }
 
 
-    sizeV += myRenderer.getSizeVertices();// adds new size with the
+    sizeV += myRenderer.getSizeVertices();
     sizeI += myRenderer.getSizeIndices();
 
     myRenderer.allocateMem(sizeV, sizeI); //100ms
@@ -70,11 +68,13 @@ void World::AppendUploadMesh(Renderer& myRenderer) {
 
 
     for (const glm::i32vec3& pos : newChunksPos) { //500ms
-        if (auto it = chunks.find(pos); it != chunks.end()) { //keeping variables local to the if block
+        if (auto it = chunks.find(pos);
+            it != chunks.end()) { //keeping variables local to the if block // if the chunk is not found (does not exist) the variable will be equal to .end()
 
-            it->second.generateMesh();  // Calls on existing Chunk0
-            const Chunk& chunk = chunks.at(pos);
+            it->second.generateMesh();
+            const Chunk& chunk = chunks.at(pos);  //get the object as reference
             myRenderer.renderMesh(chunk.mesh, chunk.position);
+
         }
         else{
             throw std::runtime_error("ERROR: new chunk is empty");
@@ -89,7 +89,7 @@ void World::AppendUploadMesh(Renderer& myRenderer) {
 }
 
 
-void World::generateChunkAround(glm::i32vec3 chunkPos) {
+void World::generateChunkAround(const glm::i32vec3 chunkPos) {
     constexpr short halfRenderDist = RENDER_DISTANCE / 2;
     constexpr int radiusSquared = halfRenderDist * halfRenderDist;
     constexpr int totalChunks = RENDER_DISTANCE * 4 * RENDER_DISTANCE;
@@ -104,18 +104,43 @@ void World::generateChunkAround(glm::i32vec3 chunkPos) {
         for (short y = 0; y < 6; y++) {
             currentChunkPos.y = y;
             for (short z = -halfRenderDist; z < halfRenderDist; z++) {
-                // check if within radius
+
                 if (const int distSquared = x * x + z * z; distSquared > radiusSquared) { //keeping variables local to the if
-                    continue;
+                    continue;                // check if within radius
+
                 }
 
-                currentChunkPos.z = chunkPos.z + z;
+                currentChunkPos.z = chunkPos.z + z; // shouldnt this be before the chek? it worked before so dik
 
-                if (auto [it, inserted] = chunks.try_emplace(currentChunkPos, currentChunkPos, noise, this);
+                if (
+                    //generates new chunk and inserts the positon to new chunks if it fails: the value it will return same value as .end()
+                    auto [it, inserted] = chunks.try_emplace(currentChunkPos, currentChunkPos, noise, this);
                     inserted) {
                     newChunksPos.push_back(currentChunkPos);
                 }
             }
         }
     }
+}
+
+void World::uploadChunksBuffers(){
+    for (const glm::i32vec3& pos : newChunksPos)
+    {
+        //500ms
+        if (auto it = chunks.find(pos);
+            it != chunks.end()) { //keeping variables local to the if block // if the chunk is not found (does not exist) the variable will be equal to .end()
+
+            it->second.generateMesh();
+            Chunk& chunk = chunks.at(pos);  //get the object as reference
+            chunk.generateMesh();
+            }
+    }
+
+}
+
+void World::renderAllChunks(){
+    for (auto& chunk : chunks) {
+        chunk.second.render();
+    }
+
 }

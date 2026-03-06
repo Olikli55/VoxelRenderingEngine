@@ -3,14 +3,20 @@
 #include "Direction.h"
 
     Chunk::Chunk(glm::i32vec3 BasePos, const siv::PerlinNoise& Noise, World* myWorld)
-    : VAO(0), VBO(0), EBO(0), position(BasePos), // Store the position
-      worldPtr(myWorld)
+    : vao()
+    , vbo(vertices.data(), vertices.size() * sizeof(GLfloat))
+    , ebo(indices.data(), indices.size() * sizeof(GLuint))
+    , position(BasePos)
+    , worldPtr(myWorld)
+
 
 {
+        setupBuffers();
     for (unsigned short x = 0; x < CHUNK_SIZE; x++)
     {
         for (unsigned short z = 0; z < CHUNK_SIZE; z++)
         {
+
             // Calculate world coordinates for the column
             const double worldX = static_cast<double>(x) + position.x * CHUNK_SIZE;
             const double worldZ = static_cast<double>(z) + position.z * CHUNK_SIZE;
@@ -28,8 +34,8 @@
             // Fill blocks up to the terrain height
             for (unsigned short y = 0; y < CHUNK_SIZE; y++)
             {
-                const int worldY = y + position.y * CHUNK_SIZE;
-                if (worldY < terrainHeight)
+                if (const int worldY = y + position.y * CHUNK_SIZE;
+                    worldY < terrainHeight)
                 {
                     data[x][y][z] = true;
                 }
@@ -39,27 +45,29 @@
 }
 
 
-bool Chunk::isSolid(int x, int y, int z) const {
+bool Chunk::isSolid(const int  x, const int y, const int z) const {
     
     if (x >= 0 && x < CHUNK_SIZE && y >= 0 && y < CHUNK_SIZE && z >= 0 && z < CHUNK_SIZE) {
         return data[x][y][z]; //inside the chunk
     }
    // return 0;
    // return 0;
-    // calculate world cordinates and then the neighbr chunk and local block c  ordinates
+    // calculate world pos  and then the neighbr chunk and local block pos
     const int worldX = position.x * CHUNK_SIZE + x;
     const int worldY = position.y * CHUNK_SIZE + y;
     const int worldZ = position.z * CHUNK_SIZE + z;
 
-    glm::i32vec3 neighborChunkPos(
-        std::floor((float)worldX / CHUNK_SIZE),
-        std::floor((float)worldY / CHUNK_SIZE),
-        std::floor((float)worldZ / CHUNK_SIZE)
+    const glm::i32vec3 neighborChunkPos(
+            // (type)variable -> c static cast -> c++
+        std::floor(static_cast<float>(worldX) / CHUNK_SIZE),
+        std::floor(static_cast<float>(worldY) / CHUNK_SIZE),
+        std::floor(static_cast<float>(worldZ) / CHUNK_SIZE)
     );
 
-    auto it = worldPtr->chunks.find(neighborChunkPos);
-    if (it != worldPtr->chunks.end()) {
-        const Chunk& neighbor = it->second;
+
+    if (const auto it = worldPtr->chunks.find(neighborChunkPos);
+        it != worldPtr->chunks.end()) { // if the chunk is not found (does not exist) the variable will be equal to .end()
+        const Chunk& neighbor = it->second; // first - position | second - Chunk
         const int localX = worldX - neighbor.position.x * CHUNK_SIZE;
         const int localY = worldY - neighbor.position.y * CHUNK_SIZE;
         const int localZ = worldZ - neighbor.position.z * CHUNK_SIZE;
@@ -157,7 +165,7 @@ void  Chunk::generateMesh() {
 
 
 void Chunk::addIndices(){
-        const auto startIndex = static_cast<unsigned int>(vertices.size() / 5); // 5 floats per vertex
+        const auto startIndex = static_cast<unsigned int>(vertices.size() / 5); // 5 floats per vertex(3-pos, 2-texture pos)
         std::vector<GLuint> tempIndices = {
             startIndex + 0, startIndex + 1, startIndex + 2,
             startIndex + 0, startIndex + 2, startIndex + 3,
@@ -165,15 +173,51 @@ void Chunk::addIndices(){
         indices.insert(indices.end(), tempIndices.begin(), tempIndices.end());
     }
 
-void Chunk::allocateMem(size_t sizeV, size_t sizeI) { //unsigned long a
-
-        //   only reserve if it needs more capacity than it has
+void Chunk::allocateMem(const size_t sizeV, const size_t sizeI){ //unsigned long
         if (indices.capacity() < sizeI) {
             indices.reserve(sizeI);
         }
-
         if (vertices.capacity() < sizeV) {
             vertices.reserve(sizeV);
         }
 
     }
+
+void Chunk::uploadMesh(){
+    vbo.Bind();
+    glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(GLfloat), vertices.data(), GL_DYNAMIC_DRAW);
+    ebo.Bind();
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(GLuint), indices.data(), GL_DYNAMIC_DRAW);
+}
+
+void Chunk::setupBuffers() {
+        vao.Bind();
+
+        //pos(3)+texcoord(2)+normal= 5 floats/vertex
+        vao.LinkAttrib(vbo, 0, 3, GL_FLOAT, 5 * sizeof(float), (void*)0);      // position
+        vao.LinkAttrib(vbo, 1, 2, GL_FLOAT, 5 * sizeof(float), (void*)(3 * sizeof(float)));  // texcoord
+
+        vao.Unbind();  // Done - VAO now stores VBO attribs + EBO binding
+    }
+
+void Chunk::render()
+{
+        {
+            // auto start = std::chrono::high_resolution_clock::now();
+
+            glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+            glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
+            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+            // Bind buffers, upload current vertex/index data, then draw
+            vbo.Bind();
+            vao.Bind();
+            ebo.Bind();
+
+            glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(indices.size()), GL_UNSIGNED_INT, 0);
+            //10-50ms
+            // auto end = std::chrono::high_resolution_clock::now();
+            // auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+            // std::cout << "Render time: " << duration.count() << " microseconds" << std::endl;
+        }
+}

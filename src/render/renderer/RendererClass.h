@@ -44,9 +44,9 @@ public:
 	void handlePrespective(Window* window, Shader& shaderProgram);
 
 private:
-	VAO VAO1;
-	VBO VBO1;
-	EBO EBO1;
+	VAO VAO_;
+	VBO VBO_;
+	EBO EBO_;
 	std::vector<GLfloat> vertices;
 	std::vector<GLuint> indices;
 
